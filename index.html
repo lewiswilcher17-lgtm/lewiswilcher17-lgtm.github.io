@@ -30,6 +30,12 @@
     font-size:1.8rem;
     margin:0 0 6px;
   }
+  .top{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+    gap:48px;
+  }
   .edu{
     margin:0 0 48px;
     padding:0;
@@ -46,6 +52,21 @@
     margin-left:28px;
     font-size:.9rem;
   }
+  .awards{
+    flex:0 0 260px;
+    padding-top:8px;
+  }
+  .awards ul{
+    list-style:none;
+    margin:0;
+    padding:0;
+  }
+  .awards li{
+    color:var(--ink-soft);
+    font-size:.9rem;
+    margin-bottom:8px;
+  }
+  .awards li strong{color:var(--ink); font-weight:600}
   h2{
     font-size:.74rem;
     text-transform:uppercase;
@@ -100,6 +121,8 @@
     font-size:.9rem;
   }
   @media (max-width:640px){
+    .top{flex-direction:column; gap:0}
+    .awards{flex:none; margin-bottom:40px; padding-top:0}
     .grid{grid-template-columns:1fr; gap:40px}
   }
 </style>
@@ -107,12 +130,24 @@
 <body>
 <div class="wrap">
 
-  <h1>Lewis Wilcher</h1>
-  <ul class="edu">
-    <li><strong>MSc Financial Mathematics</strong> — King's College London — 81.2%, Pass with Distinction<span class="date">2024–2026</span></li>
-    <li><strong>BSc (Honours) Physics</strong> — University of Exeter — 66.4%, Upper Second Class<span class="date">2021–2024</span></li>
-    <li><strong>Great Britain U21 Men's Hockey Player  (Captain of 2024)</strong><span class="date">2021–2024</span></li>
-  </ul>
+  <div class="top">
+    <div>
+      <h1>Lewis Wilcher</h1>
+      <ul class="edu">
+        <li><strong>MSc Financial Mathematics</strong> — King's College London — 81.2%, Pass with Distinction<span class="date">2024–2026</span></li>
+        <li><strong>BSc (Honours) Physics</strong> — University of Exeter — 66.4%, Upper Second Class<span class="date">2021–2024</span></li>
+        <li><strong>Great Britain U21 Men's Hockey Player  (Captain of 2024)</strong><span class="date">2021–2024</span></li>
+      </ul>
+    </div>
+
+    <div class="awards">
+      <h2>Awards</h2>
+      <ul>
+        <li><strong>Highest Overall Score</strong> for MSc Financial Mathematics at King's College London</li>
+        <li><strong>Jensen Prize</strong> for 'Best All-Round Student', Whitgift School</li>
+      </ul>
+    </div>
+  </div>
 
   <div class="grid">
 
@@ -125,6 +160,11 @@
         <li>
           <a href="projects/Reinforcement_Learning_Agents_versus_Classic_Stochastic_Control_Solutions.pdf">
             Reinforcement Learning versus Classic Stochastic Control Solutions for a Simple Liquidation Problem
+          </a>
+        </li>
+        <li>
+          <a href="projects/RL_for_Avellaneda_Stoikov_Problem.pdf">
+            Replicating Avellaneda–Stoikov Optimal Market Making with Reinforcement Learning Policies: Pitfalls and Challenges
           </a>
         </li>
       </ul>
