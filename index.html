@@ -93,13 +93,22 @@
     border-bottom:1px solid var(--line);
   }
   ul.proj-list a{
-    display:block;
+    display:flex;
+    justify-content:space-between;
+    align-items:baseline;
+    gap:20px;
     padding:16px 0;
     color:var(--ink);
     text-decoration:none;
     font-size:1rem;
   }
   ul.proj-list a:hover{color:var(--accent)}
+  ul.proj-list .proj-date{
+    flex-shrink:0;
+    white-space:nowrap;
+    color:#9A9DA4;
+    font-size:.9rem;
+  }
   .diss-box{
     background:var(--box);
     border:1px solid var(--line);
@@ -143,7 +152,7 @@
     <div class="awards">
       <h2>Awards</h2>
       <ul>
-        <li><strong>Highest Overall Score In Year</strong> for MSc Financial Mathematics at King's College London</li>
+        <li><strong>Highest Overall Score</strong> for MSc Financial Mathematics at King's College London</li>
         <li><strong>Jensen Prize</strong> for 'Best All-Round Student', Whitgift School</li>
       </ul>
     </div>
@@ -155,16 +164,21 @@
       <h2>Personal Projects</h2>
       <ul class="proj-list">
         <li>
-          <a href="projects/Deep_Delta_Hedging.pdf">Deep Delta Hedging</a>
-        </li>
-        <li>
-          <a href="projects/Reinforcement_Learning_Agents_versus_Classic_Stochastic_Control_Solutions.pdf">
-            Reinforcement Learning versus Classic Stochastic Control Solutions for a Simple Liquidation Problem
+          <a href="projects/RL_for_Avellaneda_Stoikov_Problem.pdf">
+            <span>Replicating Avellaneda–Stoikov Optimal Market Making with Reinforcement Learning Policies: Pitfalls and Challenges</span>
+            <span class="proj-date">November 2026</span>
           </a>
         </li>
         <li>
-          <a href="projects/RL_for_Avellaneda_Stoikov_Problem.pdf">
-            Replicating Avellaneda–Stoikov Optimal Market Making with Reinforcement Learning Policies: Pitfalls and Challenges
+          <a href="projects/Reinforcement_Learning_Agents_versus_Classic_Stochastic_Control_Solutions.pdf">
+            <span>Reinforcement Learning versus Classic Stochastic Control Solutions for a Simple Liquidation Problem</span>
+            <span class="proj-date">October 2026</span>
+          </a>
+        </li>
+        <li>
+          <a href="projects/Deep_Delta_Hedging.pdf">
+            <span>Deep Delta Hedging</span>
+            <span class="proj-date">September 2026</span>
           </a>
         </li>
       </ul>
